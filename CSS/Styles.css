@@ -1,0 +1,118 @@
+:root {
+  --Green: hsl(75, 94%, 57%);
+  --White: hsl(0, 0%, 100%);
+  --Grey: hsl(0, 0%, 20%);
+  --Dark-Grey: hsl(0, 0%, 12%);
+  --Off-Black: hsl(0, 0%, 8%);
+}
+@font-face {
+  font-family: 'inter';
+  src: url(../assets/fonts/Inter-VariableFont_slnt\wght.ttf),
+    url(../assets/fonts/static/Inter-Regular.ttf),
+    url(../assets/fonts/static/Inter-SemiBold.ttf),
+    url(../assets/fonts/static/Inter-Bold.ttf);
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+body {
+  font-family: inter;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--Off-Black);
+  color: var(--White);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+.app__main {
+  max-width: 30rem;
+  background: var(--Dark-Grey);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  border-radius: 1rem;
+  letter-spacing: 1px;
+}
+.app__main img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+.app__main h1{
+  margin-bottom: .5rem;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+.app__main p{
+  font-size: 14px;
+}
+.app__main .location{
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: var(--Green);
+}
+.app__main .intro{
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.app__main ul {
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.app__main ul li {
+  width: 100%;
+  background-color: var(--Grey);
+  margin-bottom:1rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  border-radius: 10px;
+  display: flex;
+  transition: background-color .5s ease-in-out ;
+}
+.app__main ul li a{
+  color: var(--White);
+  text-decoration: none;
+  font-weight: 600;
+  width: 100%;
+  transition: color .5s ease-in-out ;
+}
+.app__main ul li:hover,
+.app__main ul li:active,
+.app__main ul li:focus{
+  background-color: var(--Green);
+}
+.app__main ul li:hover a,
+.app__main ul li:active a,
+.app__main ul li:focus a{
+  color: var(--Off-Black);
+}
+
+
+@media screen and (max-width: 500px) {
+  body{
+    padding: 3rem 1.5rem;
+  }
+  .app__main{
+    padding: 1.5rem;
+  }
+}
